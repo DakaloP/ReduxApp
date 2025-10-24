@@ -4,6 +4,7 @@
 import { React } from 'react'
 import AppContext from './AppContext'
 import AppReducer from './AppReducer'
+import { useReducer } from 'react';
 import {
     INCREASE_COUNT,
     DECREASE_COUNT,
@@ -11,7 +12,7 @@ import {
 from './actions';
 import App from '../App';
 
-function AppState({ children, dispatch }) {
+function AppState({ children}) {
 const initialState = {
     counter: 0,//state variable
 }
@@ -36,4 +37,4 @@ const [state, dispatch] = useReducer(AppReducer, initialState);
 </AppContext.Provider>
 
     )}
-
+export default AppState

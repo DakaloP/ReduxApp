@@ -5,7 +5,8 @@ import {
 from './actions';
 
 
-function AppReducer(state, action) {
+
+export default function AppReducer(state, action) {
     switch (action.type) {
         case INCREASE_COUNT:
 // copy everything from state, inside change counter to increase
@@ -24,8 +25,8 @@ function AppReducer(state, action) {
             return {
                 ...state,
                 counter: 0};
-    }
+    ;
 
-      default:
-        return state;
-    }
+     default:
+     return state
+   } }
